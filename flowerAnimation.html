@@ -318,6 +318,7 @@
         showVideo();
       }, 2000);
       setTimeout(() => {
+        document.body.classList.add("not-loaded");
         document.getElementById("video").style.display = "flex";
       }, 10000);
     };
