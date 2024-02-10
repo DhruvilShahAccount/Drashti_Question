@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: black !important;
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+}
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 0 20px; /* Add padding to adjust for smaller screens */
+}
+
+h1 {
+  color: #ffcccc;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button,
+a {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #ffcccc;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none; /* Remove default underline on anchor tags */
+  display: inline-block; /* Ensure they behave the same */
+  margin-right: 10px; /* Add some spacing between the two */
+}
+
+button:hover,
+a:hover {
+  background-color: #ffb3b3;
+}
+
+.split-image-container {
+  display: none;
+  z-index: 9;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+}
+
+.split-image {
+  width: 75px;
+  height: 200px;
+  background-size: cover;
+}
+
+.split-image:nth-child(2) {
+  background-position-x: -75px;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+      max-width: 100%; /* Adjust max-width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+      font-size: 24px; /* Adjust font size for smaller screens */
+  }
+  .buttons {
+      margin-top: 10px; /* Adjust margin for smaller screens */
+  }
+  button,
+  a {
+      padding: 10px 20px; /* Adjust padding for smaller screens */
+      font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
